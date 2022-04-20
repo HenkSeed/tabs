@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
 *,
 html {
 	margin: 0;
 	padding: 0;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 200;
 }
 .main {
 	display: flex;
@@ -15,13 +20,18 @@ html {
 	padding-left: 10px;
 	margin: 0 auto;
 }
+.container h2 {
+	margin-bottom: 50px;
+}
 h2,
 .tabs,
 .choice-result {
 	text-align: center;
 }
 h2 {
-	margin-bottom: 50px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	font-size: 47px;
 }
 .tabs {
 	margin: 0;
@@ -52,12 +62,28 @@ li {
 	display: flex;
 	flex-direction: column;
 	justify-content: end;
+	padding-left: 6%;
 	/* max-width: 50%; */
 	width: 50%;
 	margin-top: 5vh;
+	font-family: 'Oswald', sans-serif;
+	/* font-family: 'Roboto', sans-serif; */
 	font-weight: bold;
 	font-size: 5vw;
 	padding-bottom: 20px;
+}
+.choice-texts li {
+	cursor: pointer;
+	background-color: rgba(220, 226, 19, 0.2);
+	border: none;
+	border-radius: 20%;
+}
+.choice-texts li:hover {
+	background-color: rgba(174, 180, 10, 0.2);
+}
+.choice-texts p {
+	text-align: center;
+	text-transform: uppercase;
 }
 .central-image {
 	width: 50%;
@@ -67,7 +93,77 @@ li {
 .choice-imgs {
 	width: 100%;
 }
+.choice-img {
+	width: 25%;
+}
 .choice-img > img {
 	width: 100%;
 	height: auto;
+}
+.modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+	background: rgba(0, 0, 0, 0.5);
+}
+.modal-wrapper {
+	position: fixed;
+	width: 600px;
+	max-width: 100%;
+	height: 500px;
+	max-height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	padding: 40px;
+	border: 2px solid #ffffff;
+	color: #fff;
+	background-color: #000000;
+	/* background-color: transparent; */
+	/* background-color: #808080; */
+	overflow-y: scroll;
+}
+.modal-wrapper h2 {
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	line-height: 100%;
+	margin-bottom: 20px;
+	/* font-size: 3vw; */
+}
+.modal-text {
+	margin-bottom: 10px;
+	font-size: 20px;
+	letter-spacing: 0.1rem;
+}
+.read-fairy {
+	font-family: 'Caveat', cursive;
+	font-size: 30px;
+	background: linear-gradient(356deg, #3866af 33%, #4182c9 66%, #8aa9d6);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.modal-close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 30px;
+	height: 30px;
+	background-color: transparent;
+	background-image: url(../img/swords-64.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
 }

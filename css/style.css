@@ -126,6 +126,7 @@ li {
 	max-height: 100vh;
 	max-width: 600px;
 	width: calc(50vw);
+	min-width: 260px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
